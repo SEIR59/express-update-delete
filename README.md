@@ -22,11 +22,6 @@ app.delete("/fruits/:indexOfFruitsArray", (req, res) => {
 });
 ```
 
-Test it using:
-
-```
-curl -X DELETE localhost:3000/fruits/1
-```
 
 ### Make the index page send a DELETE request
 
