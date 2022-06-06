@@ -220,3 +220,28 @@ The problem is that forms can't make PUT requests. Only POST and GET. We can fak
 ```html
 <form action="/fruits/{{index}}?_method=PUT" method="POST"></form>
 ```
+
+### Rowdy Logger
+
+Are your routes getting hard to keep track of? As we build more routes, it's going to get harder to keep track of them all Let's install a tool that gives us a quick summary of all our routes.
+
+```js
+npm i rowdy-logger
+```
+
+In server.js, after creating app but before any routes:
+
+```js
+const rowdy = require('rowdy-logger')
+const routesReport = rowdy.begin(app)
+```
+
+Right underneath our message that the server has started, place this line: routesReport.print() as so:
+
+```js
+app.listen(3000, () => {
+    console.log("listening on port 3000!")
+})
+```
+
+Restart your server (or let nodemon do it for you) to see your routes summary!
