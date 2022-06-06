@@ -236,11 +236,12 @@ const rowdy = require('rowdy-logger')
 const routesReport = rowdy.begin(app)
 ```
 
-Right underneath our message that the server has started, place this line: routesReport.print() as so:
+Right underneath our message that the server has started, add `routesReport.print()`:
 
 ```js
 app.listen(3000, () => {
     console.log("listening on port 3000!")
+    routesReport.print()
 })
 ```
 
