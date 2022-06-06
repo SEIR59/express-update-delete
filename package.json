@@ -1,0 +1,23 @@
+{
+  "name": "express-update-delete2",
+  "version": "1.0.0",
+  "description": "1. Create a Delete Route\r 1. Make the index page send a DELETE request\r 1. Create an edit route\r 1. Create a link to the edit route\r 1. Create an update route\r 1. Make the edit page send a PUT request",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEIR59/express-update-delete.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEIR59/express-update-delete/issues"
+  },
+  "homepage": "https://github.com/SEIR59/express-update-delete#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "liquid-express-views": "^1.0.8"
+  }
+}
