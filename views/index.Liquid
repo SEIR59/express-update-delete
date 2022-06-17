@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/main.js" async defer></script>
-    <link rel="stylesheet" href="./css/app.css">   
+    <link rel="stylesheet" href="/css/app.css">   
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +20,12 @@
            {% else %}
                 no
             {% endif %} 
+            <form action="/fruits/{{ forloop.index0 }}?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" />
+            </form>
+            <a href="/fruits/{{ forloop.index0 }}/edit">Edit</a>
         </li>
+        <br/>
         {% endfor %}
     </ul>
     <nav>
